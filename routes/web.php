@@ -11,8 +11,12 @@
 |
 */
 
+use App\Http\Controllers\WebSessionController;
+
 require __DIR__.'/sso.php';
 
 Route::get('/', function () {
     return view('home');
 })->middleware('sso-web');
+
+Route::post('/web-session/change-role-active', [WebSessionController::class, 'changeRoleActive'])->middleware('sso-web');

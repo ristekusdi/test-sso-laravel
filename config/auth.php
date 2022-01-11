@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'sso-users',
-            'model' => RistekUSDI\SSO\Models\User::class,
+            'model' => App\User::class,
         ],
 
         // 'users' => [

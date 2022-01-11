@@ -69,7 +69,7 @@ return [
      * Load guard class.
      */
     'guards' => [
-        'web' => RistekUSDI\SSO\Auth\Guard\WebGuard::class,
+        'web' => App\Services\Auth\WebGuard::class,
     ],
 
     /**

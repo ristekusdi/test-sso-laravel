@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RistekUSDI\SSO\Exceptions\CallbackException;
 use RistekUSDI\SSO\Facades\SSOWeb;
+use App\Facades\AppSession;
 
 class AuthController extends Controller
 {
@@ -30,6 +31,9 @@ class AuthController extends Controller
      */
     public function logout()
     {
+        // Forget session role_active
+        AppSession::forgetRoleActive();
+
         SSOWeb::forgetToken();
 
         $url = SSOWeb::getLogoutUrl();

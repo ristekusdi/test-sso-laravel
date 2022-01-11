@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1f3b4043b8cb0ce36ac4bf135ab5406",
+    "content-hash": "0758aa618f5d78d8f95088d748728e67",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2135,23 +2135,16 @@
         {
             "name": "ristekusdi/sso-laravel",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ristekusdi/sso-laravel.git",
-                "reference": "88e59f33bdf74bf5b6b0105f0db64a66d4fea75f"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ristekusdi/sso-laravel/zipball/88e59f33bdf74bf5b6b0105f0db64a66d4fea75f",
-                "reference": "88e59f33bdf74bf5b6b0105f0db64a66d4fea75f",
-                "shasum": ""
+                "type": "path",
+                "url": "../sso-research/packages/RistekUSDI/SSO",
+                "reference": "8f0682b3585cda49b2d0bdcf2b0d4f088cbf8378"
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.3|^7.4",
                 "illuminate/support": "~6|~7|~8",
                 "php": ">=7.4"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2168,7 +2161,11 @@
                     "RistekUSDI\\SSO\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "RistekUSDI\\SSO\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2182,15 +2179,13 @@
             "description": "SSO for internal Udayana projects based on Laravel",
             "homepage": "https://github.com/ristekusdi/sso-laravel",
             "keywords": [
-                "Authentication",
                 "SSO",
+                "authentication",
                 "authorization"
             ],
-            "support": {
-                "issues": "https://github.com/ristekusdi/sso-laravel/issues",
-                "source": "https://github.com/ristekusdi/sso-laravel/tree/main"
-            },
-            "time": "2022-01-10T06:34:00+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "swiftmailer/swiftmailer",

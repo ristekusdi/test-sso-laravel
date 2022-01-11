@@ -37,7 +37,7 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver' => 'sso-web',
             'provider' => 'users',
         ],
 
@@ -67,8 +67,8 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
+            'driver' => 'sso-users',
+            'model' => RistekUSDI\SSO\Models\User::class,
         ],
 
         // 'users' => [

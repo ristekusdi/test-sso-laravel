@@ -11,6 +11,8 @@
 |
 */
 
+require __DIR__.'/sso.php';
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->middleware('sso-web');
